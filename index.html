@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naša Ljubavna Priča</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('pozadina.jpg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            text-align: center;
+            display: block; /* Prikazuje popup odmah */
+            z-index: 1000;
+        }
+
+        .popup button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .popup button:hover {
+            background: darkred;
+        }
+        .timeline {
+            position: relative;
+            max-width: 600px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .event {
+            background: white;
+            padding: 15px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            font-family: 'Dancing Script', cursive;
+            font-size: 18px;
+        }
+        .heart {
+            position: absolute;
+            left: 50%;
+            top: -15px;
+            transform: translateX(-50%);
+            font-size: 30px;
+            color: red;
+        }
+        img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="popup" id="popup">
+        <h2> Ljubavi dobrodosla, na vremensku liniju! ❤️</h2>
+        <p> Ovo je vremenska linija, neki od nasih najlepsih i najbitnijih momenata od kada smo zajedno! Nadam se da ce ti se svideti! ❤️</p>
+        <button onclick="closePopup()">Zatvori</button>
+    </div>
+    <h1>Naša Ljubavna Priča ❤️</h1>
+    <div class="timeline">
+        <div class="event">
+            <div class="heart">❤️</div>
+            <h2>Prvi Susret</h2>
+            <p>Datum: 14. avgust 2024.</p>
+            <p>"Ovde sam te prvi put video, posle otkazane zurkice u Bela Neli."</p>
+            <img src="prvisusret.jpg" alt="Prvi Susret">
+        </div>
+        <div class="event">
+            <div class="heart">❤️</div>
+            <h2>Veče od kad smo zvanično zajedno!</h2>
+            <p>Datum: 31. Avgust 2025.</p>
+            <p>"Posle moje burne noći i popijenog italijanskog vina i cepanja usne hahha!"</p>
+            <img src="vecezajedno.jpg" alt="Zvanično Zajedno">
+        </div>
+        <div class="event">
+            <div class="heart">❤️</div>
+            <h2>Prvi put kad smo izasli sami</h2>
+            <p>Datum: 30. Septembar 2024.</p>
+            <p>"Veče za pamćenje, tada sam prvi put došao sam u Bojnik kod tebe i opraštali smo se 3 sata kao da idem u rat, a ne u Niš za faks."</p>
+            <img src="izaslisami.jpg" alt="Izasli sami">
+        </div>
+        <div class="event">
+            <div class="heart">❤️</div>
+            <h2>Fotosuting na Hisar</h2>
+            <p>Datum: 17. Decembar 2024.</p>
+            <p>"Nas fotošuting na Hisaru, beše si zanimljivo."</p>
+            <img src="fotosutinghisar.jpg" alt="Dan zaljubljenih">
+        </div>
+        <div class="event">
+            <div class="heart">❤️</div>
+            <h2>Tvoj 18. Rodjendan</h2>
+            <p>Datum: 22. Decembar 2024.</p>
+            <p>"Baš je bilo lepo veselje i baš smo se lepo izveselili."</p>
+            <img src="18rodjendan.jpg" alt="18. Rodjendan">
+        </div>
+        <div class="event">
+            <div class="heart">❤️</div>
+            <h2>Naša legendarna fotkica</h2>
+            <p>Datum: 5. Januar 2025.</p>
+            <p>"Tada smo se slikali, i ova slika mi je bukvalno u glavi nonstop."</p>
+            <img src="Legendarnafotkica.jpg" alt="Naša Legendarna Slika">
+        </div>
+        <div class="event">
+            <div class="heart">❤️</div>
+            <h2>Dan zaljubljenih</h2>
+            <p>Datum: 14. Februar 2025.</p>
+            <p>"Ovo mi je bio prvi dan zaljubljenih a da nisam sam, jako mi je drago sto je to bilo sa tobom, stvarno si me iznenadila poklonima, HVALA TI!"</p>
+            <img src="noslika.jpg" alt="Dan zaljubljenih">
+        </div>
+        <div class="event">
+            <div class="heart">❤️</div>
+            <h2>6 meseci veze</h2>
+            <p>Datum: 28. Februar 2025.</p>
+            <p>"Danas je tačno šest meseci otkako si ušla u moj život i sve promenila na bolje. Svaki dan sa tobom je priča puna smeha, ljubavi i nezaboravnih trenutaka. Ne postoji reč kojom bih mogao opisati koliko mi značiš i koliko sam zahvalan što baš tebe imam pored sebe.
+
+Tvoj osmeh mi je postao omiljeno mesto na svetu, a tvoj zagrljaj dom u kojem želim zauvek da ostanem. Sa tobom sam naučio šta znači voleti iskreno, bezuslovno i svim srcem.
+Hvala ti što si moja podrška, što me voliš onakvog kakav jesam i što zajedno gradimo priču vrednu svakog trenutka. Ovi meseci su mi pokazali da si ti ona prava – moj razlog za sreću, moj oslonac i moje najveće blago.
+
+Srećnih šest meseci, ljubavi! Radujem se svakom novom danu s tobom i svemu što nas tek čeka. Volim te beskrajno! ❤️"</p>
+            <img src="zajedno.jpg" alt="6 meseci veze">
+        </div>
+    </div>
+    <script>
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
